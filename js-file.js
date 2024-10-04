@@ -1,24 +1,23 @@
 let container = document.querySelector(".container");
-let square = document.querySelector("#horizontal");
+let squares = document.querySelectorAll(".horizontal");
 
-function grid() {
-    for (let i = 0; i < 16; i++) {
+
+function grid(num) {
+    for (let i = 0; i < num; i++) {
         let squareV = document.createElement("div");
         squareV.classList.add("vertical");
         container.appendChild(squareV);
-        for (let n = 0; n < 16; n++){
+        for (let n = 0; n < num; n++) {
             let squareH = document.createElement("div");
             squareH.classList.add("horizontal");
-            squareH.textContent = "horizontal";
+            squareH.addEventListener("mouseover", backgroundChange)
             squareV.appendChild(squareH);
         }
     }
 }
 
-function backgroundColor(){
-    square.style.backgroundColor = "purple";
+function backgroundChange(){
+    this.style.backgroundColor = "pink";
 }
 
-grid();
-
-square.addEventListener("mouseover", backgroundColor);
+grid(16);
