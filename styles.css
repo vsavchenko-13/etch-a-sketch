@@ -8,23 +8,18 @@ body{
     width: 960px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.container{
-    padding: 3%;
-    align-self: center;
 }
 
 .vertical{
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+
 }
 
 .horizontal{
-    display: flex;
-    margin: 1px;
     aspect-ratio: 1/1;
-    border:solid grey;
+    display: flex;
+    flex:1;
+    margin: 1px;
+    border: solid black;
 }
-
