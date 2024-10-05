@@ -8,9 +8,14 @@ function grid(num){
         for(let n=0; n < num ; n++){
             let horizontal = document.createElement("div");
             horizontal.classList.add("horizontal");
+            horizontal.addEventListener("mouseover", backgroundChange);
             vertical.appendChild(horizontal);
         }
     }
+}
+
+function backgroundChange(){
+    this.style.backgroundColor = "pink"
 }
 
 grid(16);

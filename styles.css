@@ -10,9 +10,20 @@ body{
     flex-direction: column;
 }
 
+button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
 .vertical{
     display: flex;
     justify-content: center;
+    flex-grow: 0;
+    
 
 }
 
